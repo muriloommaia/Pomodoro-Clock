@@ -103,9 +103,9 @@ function App () {
 
 
     return (
-        <div className="center-align">
-            <h1>Pomodoro Clock</h1>
-            <div className="dual-container">
+        <div className="container">
+            <h1 className="title">POMODORO CLOCK</h1> 
+            <div className="row">
                 <Break 
                     title={"Break Length"}
                     changeTime={changeTime}
@@ -125,11 +125,11 @@ function App () {
                 <h3 className="session" id="timer-label">{onBreak? "Break Time" : "Session Time"}</h3>
                 <h1 id="time-left">{formatTime(displayTime)}</h1>
             </div>
-            <button id="start_stop" className="btn-small lighten-2 func" onClick={controlTime}>
+            <button id="start_stop" className="btn func" onClick={controlTime}>
                 {timerOn ? (<i class="fas fa-pause"></i>) : 
                 (<i class="fas fa-play"></i>)}
             </button>
-            <button id="reset" className="btn-small lighten-2 func" onClick={resetTime}>
+            <button id="reset" className="btn func" onClick={resetTime}>
                 <i class="fas fa-undo-alt"></i>
             </button>
             <audio id="beep" src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"> </audio>
@@ -140,18 +140,18 @@ function App () {
 
 function Break ({title, changeTime, type, time, formatTime}) {
     return (
-        <div id="break-label">
+        <div className="col-12 col-sm-6 length" id="break-label">
             <h3>{title}</h3>
-            <div className="time-sets">
+            <div className="time-sets d-flex justify-content-around ">
                 <button id="break-decrement"
                 onClick={() => changeTime(-60,type)}
-                className="btn-small lighten-2">
+                className="btn">
                     <i className="fas fa-arrow-down"></i>
                 </button>
                 <h4 id="break-length">{formatTime(time)}</h4>
                 <button id="break-increment"
                 onClick={() => changeTime(+60,type)}
-                className="btn-small lighten-2">
+                className="btn">
                     <i class="fas fa-arrow-up"></i>
                 </button>
             </div>
@@ -161,18 +161,18 @@ function Break ({title, changeTime, type, time, formatTime}) {
 
 function Session ({title, changeTime, type, time, formatTime}) {
     return (
-        <div id="session-label">
+        <div className="col-12 col-sm-6 length" id="session-label">
             <h3>{title}</h3>
-            <div className="time-sets">
+            <div className="time-sets d-flex justify-content-around">
                 <button id="session-decrement"
                 onClick={() => changeTime(-60,type)}
-                className="btn-small lighten-2">
+                className="btn">
                     <i class="fas fa-arrow-down"></i>
                 </button>
                 <h4 id="session-length">{formatTime(time)}</h4>
                 <button id="session-increment"
                 onClick={() => changeTime(+60,type)}
-                className="btn-small lighten-2">
+                className="btn">
                     <i class="fas fa-arrow-up"></i>
                 </button>
             </div>
