@@ -1,13 +1,21 @@
 body {
-    color: white;
-    background-color: #333;
+    margin: 0
 }
-.btn-small {
-    background-color: rgb(86, 123, 133);
-    transition: 1s;
+.container-fluid {
+    font-family: 'Concert One', cursive;
+    background-color: #eeebdd;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
 }
-.btn-small:hover {
-    background-color: rgb(114, 186, 189);
+.btn {
+    background-color: #810000 !important;
+    border: 1px solid black !important;
+    transition: 1s !important;
+    width: 50px;
+}
+.btn:active {
+    background-color: black !important;
 }
 .func {
     margin: 5px
@@ -33,11 +41,28 @@ h3 h1{
     margin: auto
 }
 .time-sets {
-    width: 30%;
+
     margin:0;
     display: grid;
     grid-template-columns: 50px 130px 50px;
     align-items: center;
     text-align: center;
 }
+.length {
+    padding: 10% 18% 5% ;
+}
 
+.center-align {
+    height: 100vh;
+}
+
+.title  {
+    font-size: 60px;
+}
+
+#time-left  {
+    font-size: 80px;
+}
+.fas {
+    color: white;
+}
