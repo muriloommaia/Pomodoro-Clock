@@ -42,7 +42,7 @@ h3 h1{
     text-align: center;
 }
 .length {
-    padding: 10% 10% 5% ;
+    padding: 5% 5% 5% ;
 }
 
 .center-align {
@@ -51,6 +51,7 @@ h3 h1{
 
 .title  {
     font-size: 60px;
+    padding-top: 20px;
 }
 
 #time-left  {
