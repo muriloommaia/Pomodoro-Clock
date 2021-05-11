@@ -122,7 +122,7 @@ function App () {
                 />
             </div>
             <div>
-                <h3 className="session" id="timer-label">{onBreak? "Break Time" : "Session Time"}</h3>
+                <h1 className="session" id="timer-label">{onBreak? "Break Time" : "Session Time"}</h1>
                 <h1 id="time-left">{formatTime(displayTime)}</h1>
             </div>
             <button id="start_stop" className="btn func" onClick={controlTime}>
@@ -141,14 +141,14 @@ function App () {
 function Break ({title, changeTime, type, time, formatTime}) {
     return (
         <div className="col-12 col-sm-6 length" id="break-label">
-            <h3>{title}</h3>
+            <h1>{title}</h1>
             <div className="time-sets d-flex justify-content-around ">
                 <button id="break-decrement"
                 onClick={() => changeTime(-60,type)}
                 className="btn">
                     <i className="fas fa-arrow-down"></i>
                 </button>
-                <h4 id="break-length">{formatTime(time)}</h4>
+                <h2 id="break-length">{formatTime(time)}</h2>
                 <button id="break-increment"
                 onClick={() => changeTime(+60,type)}
                 className="btn">
@@ -162,14 +162,14 @@ function Break ({title, changeTime, type, time, formatTime}) {
 function Session ({title, changeTime, type, time, formatTime}) {
     return (
         <div className="col-12 col-sm-6 length" id="session-label">
-            <h3>{title}</h3>
+            <h1>{title}</h1>
             <div className="time-sets d-flex justify-content-around">
                 <button id="session-decrement"
                 onClick={() => changeTime(-60,type)}
                 className="btn">
                     <i class="fas fa-arrow-down"></i>
                 </button>
-                <h4 id="session-length">{formatTime(time)}</h4>
+                <h2 id="session-length">{formatTime(time)}</h2>
                 <button id="session-increment"
                 onClick={() => changeTime(+60,type)}
                 className="btn">
